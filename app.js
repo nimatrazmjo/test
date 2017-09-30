@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 var dotEnv = require('dotenv');
 var helmet = require('helmet');
 var compression = require('compression');
-dotEnv.load();
-var app = express();
 
+var app = express();
+dotEnv.load();
 
 
 // view engine setup

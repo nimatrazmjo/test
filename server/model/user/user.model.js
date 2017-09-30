@@ -1,18 +1,15 @@
-var mongoose = require('mongoose');
-var userJSON = require('./user');
-mongoose.Promise = Promise;
+var User = require('./user.schema');
 
-var userSchema = mongoose.Schema(userJSON);
-var User = mongoose.model('User', userSchema);
-
-module.exports.add = (req, res, next) => {
+/** Add time signature */
+module.exports.add = (req, res) => {
   User.create(req.body)
     .then(result => res.json(result))
-    .catch(err => next(err));
+    .catch(err => res.json(err));
 };
 
-module.exports.list = (req, res, next) => {
+/** List time signature */
+module.exports.list = (req, res) => {
   User.find()
     .then(list => res.json(list))
-    .catch(err => next(err));
+    .catch(err => res.json(err));
 }
