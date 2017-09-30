@@ -1,0 +1,216 @@
+{
+  "type": {
+    "type": "string",
+    "required": true,
+    "description": "one of 'employer/job-seeker/admin' ",
+    "default": "job-seeker"
+  },
+  "firstName": {
+    "type": "string",
+    "required": true
+  },
+  "lastName": {
+    "type": "string",
+    "required": true
+  },
+  "phone": {
+    "type": "string"
+  },
+  "country": {
+    "type": "string"
+  },
+  "state": {
+    "type": "string"
+  },
+  "city": {
+    "type": "string"
+  },
+  "dateOfBirth": {
+    "type": "date"
+  },
+  "currentPosition": {
+    "type": "string",
+    "default": ""
+  },
+  "isActive": {
+    "type": "boolean",
+    "default": true
+  },
+  "isBanned": {
+    "type": "boolean",
+    "default": false
+  },
+  "banReason": {
+    "type": "string"
+  },
+  "lastIP": {
+    "type": "string"
+  },
+  "createdAt": {
+    "type": "date"
+  },
+  "updatedAt": {
+    "type": "date"
+  },
+  "summary": {
+    "type": "string"
+  },
+  "objective": {
+    "type": "string"
+  },
+  "functionalAreas": ["string"],
+  "industries": ["string"],
+  "emails": [{
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "privacy": {
+      "type": "string",
+      "required": true
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    }
+  }],
+  "phones": [{
+    "phoneType": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string",
+      "required": true
+    },
+    "privacy": {
+      "type": "string"
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuid"
+    }
+  }],
+  "skills": ["string"],
+  "languages": [{
+    "name_en": {
+      "type": "string",
+      "required": true
+    },
+    "name_da": {
+      "type": "string",
+      "required": true
+    },
+    "name_pa": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "required": true
+    }
+  }],
+  "profilePic": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "mime": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "left": {
+      "type": "string"
+    },
+    "right": {
+      "type": "string"
+    },
+    "top": {
+      "type": "string"
+    },
+    "bottom": {
+      "type": "string"
+    }
+  },
+  "coverPic": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "mime": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "left": {
+      "type": "string"
+    },
+    "right": {
+      "type": "string"
+    },
+    "top": {
+      "type": "string"
+    },
+    "bottom": {
+      "type": "string"
+    }
+  },
+  "deleted": {
+    "type": "boolean",
+    "required": true,
+    "default": false
+  },
+  "totalJobPosting": {
+    "type": "number",
+    "default": 0
+  },
+  "securityCode": {
+    "type": "string"
+  },
+  "userAgent": {
+    "type": "object"
+  },
+  "profileVisibility": {
+    "type": "string",
+    "default": "public"
+  },
+  "twoWayAuth": {
+    "type": "boolean",
+    "default": false
+  },
+  "profileVerificationRequest": {
+    "type": "boolean",
+    "default": false
+  },
+  "profileMeter": {
+    "type": "number",
+    "default": 0
+  },
+  "isProfileVerifiedByAdmin": {
+    "type": "boolean",
+    "default": false
+  },
+  "profileStatus": {
+    "type": "string",
+    "default": "visible"
+  }
+}

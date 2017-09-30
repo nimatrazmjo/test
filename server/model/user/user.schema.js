@@ -1,12 +1,6 @@
 var mongoose = require('mongoose');
-
+var user = require('./json/user.json');
 mongoose.Promise = global.Promise;
-
-
-let userCollection = {
-  "firstName": "string",
-  "lastName": "string"
-}
-let userSchema = mongoose.Schema(userCollection);
+let userSchema = mongoose.Schema(user);
 
 module.exports = mongoose.model('User', userSchema);
